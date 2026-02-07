@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="772" height="213" viewBox="0 0 772 213">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 104px;
+        font-family: MuseoSans-100, "Museo Sans";
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 78px;
+        font-family: MuseoSans-500, "Museo Sans";
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+        opacity: 0.36;
+      }
+    </style>
+  </defs>
+  <text id="deutscher" class="cls-1" x="279.234" y="100.306">deutscher</text>
+  <text id="digital_award" data-name="digital award" class="cls-2" x="279.234" y="178.306">digital award</text>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-3" d="M76.991,87.587l98.2-74.653a4.437,4.437,0,0,1,6.218.847l74.652,98.2a4.436,4.436,0,0,1-.847,6.217l-98.2,74.653a4.437,4.437,0,0,1-6.218-.847L76.144,93.8A4.437,4.437,0,0,1,76.991,87.587Z"/>
+  <path class="cls-3" d="M22.884,114.477L94.779,14.238a4.437,4.437,0,0,1,6.192-1.02L201.21,85.113a4.437,4.437,0,0,1,1.019,6.192L130.335,191.544a4.437,4.437,0,0,1-6.192,1.02L23.9,120.669A4.437,4.437,0,0,1,22.884,114.477Z"/>
+</svg>

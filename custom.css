@@ -1,0 +1,377 @@
+/* Custom CSS to enhance the Ujet clone */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animations that might have been in main.css */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Section Enhancements */
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* Navbar Styling */
+/* Navbar Styling */
+.nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto !important;
+    max-height: 100px;
+    /* Constrain height to prevent full-screen blur */
+    bottom: auto !important;
+    z-index: 9999;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+/* Scrolled state for Navbar (can be toggled via JS if needed, but adding base transparency) */
+.nav {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure mobile nav is hidden on desktop to avoid interference */
+@media (min-width: 992px) {
+    .mobile-nav-parent {
+        display: none !important;
+    }
+}
+
+.logo-white,
+.logo-black {
+    transition: opacity 0.3s ease;
+}
+
+/* Navigation List Container */
+.nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure list items are not stacked */
+.nav-list .li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Hide the decorative line that might be overlapping text */
+.nav-list .li .line {
+    display: none;
+}
+
+/* Adjust plus icon parent */
+.nav-list .li .plus-parent {
+    margin-left: 10px;
+    position: relative;
+    /* Ensure it doesn't overlap */
+}
+
+/* Navigation Links */
+.nav-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    margin-left: 30px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section Enhancements */
+#intro {
+    position: relative;
+    padding-top: 150px;
+    /* Space for fixed navbar */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 .span-txt {
+    display: inline-block;
+    /* Essential for transform animations */
+}
+
+/* Hide mega menu images by default so they don't expand the nav */
+.sub-nav-image-parent {
+    display: none;
+}
+
+/* Fix overlapping text in content sections */
+.content-text-block {
+    position: relative;
+    background: #fff;
+    /* Ensure opacity */
+    z-index: 5;
+    padding: 20px;
+}
+
+
+/* Mobile Menu Overrides (Ensure readability) */
+@media (max-width: 991px) {
+    .nav {
+        padding: 15px 20px;
+    }
+
+    .nav-link {
+        display: none;
+        /* Hide desktop links on mobile, relying on hamburger */
+    }
+}
+
+/* Fixes for potentially broken layout elements */
+.w-webflow-badge {
+    display: none !important;
+    /* Hide webflow badge if present */
+}
+
+/* Smooth reveal animation class */
+.revealed {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition: all 0.8s ease-out;
+}
+
+/* Fix overlapping text in content sections */
+.intro-front-rank {
+    position: relative;
+    padding: 120px 0 60px;
+    z-index: 5;
+    background-color: transparent;
+}
+
+.intro-front-rank h1 {
+    margin-bottom: 20px;
+}
+
+/* Footer Logo Grid Fixes */
+.logo-parent-w {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pr-60 {
+    padding-right: 60px;
+}
+
+.width-240 {
+    width: 240px;
+    text-align: center;
+}
+
+.width-240 img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .pr-60 {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .logo-parent-w {
+        flex-direction: column;
+    }
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    font-size: 14px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-link {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+.footer-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Footer Grid Adjustment */
+.w-layout-grid.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+}
+
+@media (max-width: 767px) {
+    .w-layout-grid.grid-2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Fix Front-Rank Section Overlap (Missing Webflow Styles Fallback) */
+    .sticky-wrapper,
+    .sticky-container,
+    .container-sticky,
+    .scroll-slide-section {
+        position: relative !important;
+        height: auto !important;
+        width: 100%;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .intro-front-rank {
+        margin-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    /* Force slides to stack vertically */
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+        position: relative !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 600px;
+        /* Give them height */
+        margin-bottom: 60px;
+        background: #222;
+        /* Fallback background */
+        overflow: hidden;
+    }
+
+    /* Ensure background images cover the area */
+    .scroll-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        opacity: 0.6;
+        /* Darken for text readability */
+    }
+
+    /* Ensure text is on top */
+    .block-inner {
+        position: relative;
+        z-index: 2;
+        padding: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    /* Hide potential duplicate elements if needed */
+    .scroll-img-parent {
+        display: none !important;
+        /* Hide if it's a separate image track causing issues */
+    }
+
+    /* Fix text colors if they are dark on dark */
+    .light,
+    .light h2,
+    .light p {
+        color: #fff !important;
+    }
