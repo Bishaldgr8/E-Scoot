@@ -60,10 +60,9 @@ h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto !important;
-    max-height: 100px;
-    /* Constrain height to prevent full-screen blur */
-    bottom: auto !important;
+    height: auto;
+    /* max-height: 100px; Reverted constraint */
+    bottom: auto;
     z-index: 9999;
     padding: 20px 40px;
     display: flex;
@@ -110,7 +109,7 @@ h6 {
 
 /* Hide the decorative line that might be overlapping text */
 .nav-list .li .line {
-    display: none;
+    /* display: none; Reverted line hiding */
 }
 
 /* Adjust plus icon parent */
@@ -307,71 +306,93 @@ h1 .span-txt {
         gap: 20px;
     }
 
-    /* Fix Front-Rank Section Overlap (Missing Webflow Styles Fallback) */
-    .sticky-wrapper,
-    .sticky-container,
-    .container-sticky,
-    .scroll-slide-section {
-        position: relative !important;
-        height: auto !important;
-        width: 100%;
-        display: block !important;
-        overflow: visible !important;
+}
+
+/* Fix Front-Rank Section Overlap: Hide secondary slides GLOBALLY */
+.slide-2,
+.slide-3 {
+    display: none !important;
+}
+
+/* Ensure Slide 1 doesn't overlap excessively if sticky logic fails */
+.slide-1 {
+    position: relative;
+    background: #222;
+    /* Ensure legibility against background */
+    z-index: 10;
+}
+
+/* Ensure text colors are correct */
+.light,
+.light h2,
+.light p {
+    color: #fff !important;
+}
+
+/* Fix Image Stretching in Front-Rank Section */
+.scroll-img {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Adjust 'Schedule a Call' button position */
+.call-btn {
+    top: 110px !important;
+}
+
+/* Marquee / Infinite Logo Scroll */
+.logo-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    /* background: transparent; */
+}
+
+.logo-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+.logo-item {
+    flex: 0 0 auto;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    max-width: 150px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
     }
 
-    .intro-front-rank {
-        margin-bottom: 60px;
-        padding-top: 60px;
+    100% {
+        transform: translateX(-50%);
     }
+}
 
-    /* Force slides to stack vertically */
-    .slide-1,
-    .slide-2,
-    .slide-3 {
-        position: relative !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 600px;
-        /* Give them height */
-        margin-bottom: 60px;
-        background: #222;
-        /* Fallback background */
-        overflow: hidden;
-    }
+.logo-track:hover {
+    animation-play-state: paused;
+}
 
-    /* Ensure background images cover the area */
-    .scroll-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-        opacity: 0.6;
-        /* Darken for text readability */
-    }
-
-    /* Ensure text is on top */
-    .block-inner {
-        position: relative;
-        z-index: 2;
-        padding: 40px;
-        max-width: 600px;
-        margin: 0 auto;
-        color: #fff;
-    }
-
-    /* Hide potential duplicate elements if needed */
-    .scroll-img-parent {
-        display: none !important;
-        /* Hide if it's a separate image track causing issues */
-    }
-
-    /* Fix text colors if they are dark on dark */
-    .light,
-    .light h2,
-    .light p {
-        color: #fff !important;
-    }
+/* Fix for DEVELOPMENT OF E SCOOT FOUNDERS text alignment */
+h3.light {
+    text-align: left !important;
+    word-wrap: break-word;
+    white-space: normal !important;
+    max-width: none !important;
+    width: auto !important;
+    display: block !important;
+    line-height: 1.2 !important;
+}

@@ -1,0 +1,5 @@
+Full h3 element:
+'<h3 class="light">DEVELOPMENT OF E SCOOT FOUNDERS SERIES</h3>'
+
+Actual h3 element:
+<h3 class="light">DEVELOPMENT OF E SCOOT FOUNDERS SERIES</h3>

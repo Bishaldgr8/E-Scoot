@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <style>
+      .logo-text { 
+        font-family: 'Arial Black', 'Arial Bold', sans-serif; 
+        font-weight: 900; 
+        font-size: 32px; 
+        fill: #FFFFFF;
+        letter-spacing: 2px;
+      }
+      .lightning {
+        fill: #00D9FF;
+      }
+    </style>
+  </defs>
+  
+  <!-- Lightning bolt integrated with E -->
+  <polygon class="lightning" points="22,12 18,28 26,28 20,48 32,24 24,24 28,12"/>
+  
+  <!-- E SCOOT text -->
+  <text x="40" y="42" class="logo-text">E SCOOT</text>
+</svg>

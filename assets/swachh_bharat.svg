@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <circle cx="70" cy="50" r="15" stroke="#333" stroke-width="3" fill="none"/>
+  <circle cx="130" cy="50" r="15" stroke="#333" stroke-width="3" fill="none"/>
+  <path d="M85,50 L115,50 M55,50 L40,40 M145,50 L160,40" stroke="#333" stroke-width="3" fill="none"/>
+  <text x="100" y="80" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">SWACHH BHARAT</text>
+</svg>
