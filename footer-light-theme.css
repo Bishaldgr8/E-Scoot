@@ -10,7 +10,9 @@ footer.footer,
 /* Ensure footer text is dark for readability */
 .footer-txt,
 .footer-link,
-.footer-sub {
+.footer-sub,
+.footer-txt-sm,
+.footer-txt-sm span {
     color: #2c3e50 !important;
 }
 
