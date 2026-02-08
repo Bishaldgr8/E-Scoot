@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="webflow.css" rel="stylesheet" type="text/css"/>
+<link href="footer-light-theme.css" rel="stylesheet" type="text/css"/>
 <style>
     /* Quote Styling */
     .team-quote {
@@ -107,11 +108,11 @@
     padding: 0;
     box-sizing: border-box;
     flex-wrap: nowrap; /* Responsive wrap */
-}
     overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
+}
 
 
 .team-card {
@@ -225,32 +226,45 @@ h4 { margin: 0; font-size: 1.2rem; color: #fff; }
     .team-grid-container {
         margin: 40px 0 40px 0 !important; /* Reset negative margin on mobile */
         gap: 15px !important;
-        padding: 0 20px !important;
+        padding: 0 10px !important;
+        overflow-x: scroll !important; /* Enable horizontal scroll */
+        -webkit-overflow-scrolling: touch !important; /* Smooth iOS scrolling */
+        scroll-snap-type: x proximity !important; /* Snap to cards on mobile */
     }
     
     .team-card {
-        width: 200px !important; /* Smaller width for mobile */
-        min-width: 200px !important;
+        width: 250px !important; /* Good size for mobile viewing */
+        min-width: 250px !important;
         margin-right: 15px !important;
+        flex-shrink: 0 !important; /* Prevent cards from shrinking */
+        scroll-snap-align: start !important;
     }
     
     .team-slider-wrapper {
         width: 100% !important;
         margin: 20px 0 !important;
+        overflow: visible !important; /* Allow content to overflow for scrolling */
+    }
+    
+    .block-cover {
+        overflow-x: hidden !important; /* Prevent double scrollbar */
     }
 }
 
 @media screen and (max-width: 480px) {
     .team-grid-container {
         margin: 20px 0 20px 0 !important;
-        gap: 10px !important;
-        padding: 0 15px !important;
+        gap: 12px !important;
+        padding: 0 10px !important;
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     
     .team-card {
-        width: 180px !important; /* Even smaller for very small screens */
-        min-width: 180px !important;
-        margin-right: 10px !important;
+        width: 220px !important; /* Comfortable size for small phones */
+        min-width: 220px !important;
+        margin-right: 12px !important;
+        flex-shrink: 0 !important;
     }
     
     .team-info h4 {
@@ -260,6 +274,28 @@ h4 { margin: 0; font-size: 1.2rem; color: #fff; }
     .team-info .role {
         font-size: 0.85rem !important;
     }
+}
+</style>
+
+<!-- Light Theme for Team Section -->
+<style>
+/* Light background for team section container */
+.block-cover {
+    background-color: #f8f9fa !important;
+    padding: 40px 0;
+}
+
+.slider-wrap {
+    background-color: #f8f9fa !important;
+}
+
+/* Adjust team card text colors for light background */
+.team-info h4 {
+    color: #2c3e50 !important; /* Dark text for light background */
+}
+
+.team-info .role {
+    color: #6c757d !important; /* Gray text for role */
 }
 </style>
 

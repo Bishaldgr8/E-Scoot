@@ -1,0 +1,19 @@
+/* Light Footer Theme Override */
+footer.footer,
+.footer,
+.footer-parent,
+.footer-child,
+.container-ptb-60 {
+    background-color: #f8f9fa !important;
+}
+
+/* Ensure footer text is dark for readability */
+.footer-txt,
+.footer-link,
+.footer-sub {
+    color: #2c3e50 !important;
+}
+
+.footer-link:hover {
+    color: #1a252f !important;
+}
