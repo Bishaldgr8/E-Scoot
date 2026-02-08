@@ -4,7 +4,7 @@ A modern, animation-heavy sample website showcasing advanced CSS design techniqu
 
 ## 🌐 Live Demo
 
-Visit the live website: **[https://e-scoot.vercel.app/](https://e-scoot.vercel.app/)**
+Visit the live website: **[https://e-scoot-68e6jkjr4-bishal-boros-projects.vercel.app/](https://e-scoot-68e6jkjr4-bishal-boros-projects.vercel.app/)**
 
 ## ✨ Preview
 
